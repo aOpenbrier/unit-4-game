@@ -1,0 +1,83 @@
+html{
+    height: 100vh;
+}
+body{
+    height: 100vh;
+    background: #50afcf;
+    background: linear-gradient(0deg, #ff9d3c, #ffc05f, #eeeeee, #50afcf, #3f97b6);
+}
+h1, h2, h4{
+    text-align: center;
+    margin-bottom: 0.2em;
+}
+
+.fightarea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.charbox{
+    position: relative;
+}
+.photo{
+    height: 33vh;
+}
+.name{
+    color: white;
+    position: absolute;
+    top: 2px;
+}
+
+.hp{
+    color: white;
+    position: absolute;
+    bottom: 2px;
+}
+
+.vs{
+    padding: 5px;
+    display: none;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#reset{
+    display: none;
+    position: fixed;
+    bottom: 1%;
+    left: 1%;
+
+}
+#attack{
+    visibility: hidden;
+}
+
+#selection{
+    display: flex;
+    justify-content: space-around
+
+}
+
+.choice > img{
+    max-width: 24vw;
+    max-height: 31vw;
+}
+
+@media only screen and (min-width: 768px){
+
+    photo{
+        height: unset;
+    }
+
+    .fightarea{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .vs{
+        flex-direction: column;
+        height: 200px;
+        width: unset;
+    }
+}
