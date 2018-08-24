@@ -36,9 +36,7 @@ let ftrAP = 0
 let defIndex = -1 //defender selected charArr index, -1 not yet selected
 let defHP = 0
 let activeArr = [] //characters remaining
-
-
-
+let loseCount = 0
 
 function newGame() {   //new gameinitialize game with characters in selection area
     ftrIndex = -1
@@ -130,6 +128,14 @@ $('#attack').on('click', function () {
                     <h4>You were defeated by ${charArr[defIndex].name}!</h4>
                     <h4>Press Reset to play again.</h4>
                      `)
+                loseCount++
+                console.log(loseCount)
+                $('#hint1').css('display', 'block')
+                console.log('first hint')
+                if (loseCount === 2){
+                    console.log('second hint')
+                    $('#hint2').css('display', 'block')
+                }
             }
             else {
                 $('#ftrHP').text(`HP: ${ftrHP}`)
@@ -140,6 +146,14 @@ $('#attack').on('click', function () {
 
 $('#reset').on('click', function () {
     newGame()
+})
+
+$('#hint1').on('click', function(){
+    $('#alert').append('<h4>Hint: Your attack power increases after each attack. Counter-attack power stays the same</h4>')
+})
+
+$('#hint2').on('click', function () {
+    $('#alert').append('<h4>Hint: First target the Spice with the lowest counter-attack</h4>')
 })
 
 newGame()

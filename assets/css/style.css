@@ -46,13 +46,6 @@ h1, h2, h4{
     align-items: center;
 }
 
-#reset{
-    display: none;
-    position: fixed;
-    bottom: 1%;
-    left: 1%;
-
-}
 #attack{
     visibility: hidden;
 }
@@ -62,23 +55,46 @@ h1, h2, h4{
     justify-content: space-around;
     flex-wrap: wrap;
     }
-
-.choice {
-    margin-bottom: 2%;
+    
+    .choice {
+        margin-bottom: 2%;
 }
 
 .first > img{
     max-width: 48vw;
-    max-height: 62vw;
+    max-height: 33vh;
 }
 
 .second > img {
-    width: 24vw;
-    height: 31vw
+    max-width: 24vw;
+    max-height: 33vh;
 }
+#reset{
+    display: none;
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+}
+
+#hint1 {
+    display: none;
+    width: 4em;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+}
+
+#hint2 {
+    display: none;
+    width: 4em;
+    position: fixed;
+    bottom: 1em;
+    right: 6em;
+}
+
 @media only screen and (min-width: 768px){
-
-
+    
+    
     photo{
         height: unset;
     }
